@@ -1,0 +1,11 @@
+1.recyclerView：瀑布流相关demo      MyRecyclerActivity
+2.powerfulEditText: editText相关封装
+3.topActivity： 显示当前acitivity
+4.expandabletextview：textview展开; textview滚动显示
+5.InfiniteCardViewActivity  图片操作  compile 'com.bakerj:infinite-cards:1.0.1'
+6.AgentWebActivity       compile 'com.just.agentweb:agentweb:1.2.1'
+7.PieChartViewDemoActivity  扇形图控件
+8.MyGlideActivity glide加载图片  http://blog.csdn.net/u013005791/article/details/74532091
+9.alram  AlarmActivity 闹钟提示
+10.cart  CartActivity   树状图
+11.

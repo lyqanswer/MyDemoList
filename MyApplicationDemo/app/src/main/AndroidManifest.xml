@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="mydemo.edu.com.myapplicationdemo">
+
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:name=".activity.MyAppalachian"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.DesignDemo">
+
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.recyclerView.RecyclerViewActivity"/>
+        <activity android:name=".activity.topActivity.TopActivity"/>
+        <activity android:name=".activity.powerfulEditText.PowerfulEditTextDemoActivity"/>
+        <activity android:name=".activity.expandabletextview.ExpandableTextViewDemoActivity"/>
+        <activity android:name=".activity.expandabletextview.RunningTextViewDemoActivity"/>
+        <activity android:name=".activity.infinitecardview.InfiniteCardViewActivity"/>
+        <activity android:name=".activity.agentweb.AgentWebActivity"/>
+        <activity android:name=".activity.piechartview.PieChartViewDemoActivity"/>
+        <activity android:name=".activity.recyclerView.MyRecyclerActivity"/>
+        <activity android:name=".activity.recyclerView.DividerActivity"/>
+        <activity android:name=".activity.recyclerView.TimelineActivity"/>
+        <activity android:name=".activity.recyclerView.BookRankActivity"/>
+        <activity android:name=".activity.recyclerView.HeaderActivity"/>
+        <activity android:name=".activity.recyclerView.StickyHeaderActivity"/>
+        <activity android:name=".activity.recyclerView.ColorDividerActivity"/>
+        <activity android:name=".activity.glide.MyGlideActivity"/>
+        <activity android:name=".activity.alarm.AlarmActivity"/>
+        <activity android:name=".activity.linkScrollMsky.MyActivity"/>
+        <activity android:name=".activity.cart.CartActivity"/>
+        <activity android:name=".activity.scroll.ScrollActivity"/>
+
+        <activity
+            android:name=".activity.topActivity.AppShortcutsActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/TransparentTheme"/>
+
+        <service
+            android:name=".activity.topActivity.WatchingService"
+            android:enabled="@bool/use_watching_service"/>
+        <service
+            android:name=".activity.topActivity.WatchingAccessibilityService"
+            android:description="@string/app_name"
+            android:enabled="@bool/use_accessibility_service"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility"/>
+        </service>
+        <service
+            android:name=".activity.topActivity.QuickSettingTileService"
+            android:enabled="@bool/qs_tile_service_availability"
+            android:icon="@drawable/ic_notification"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="true"/>
+        </service>
+
+        <receiver android:name=".activity.topActivity.NotificationActionReceiver">
+            <intent-filter>
+                <action android:name="com.willme.topactivity.ACTION_NOTIFICATION_RECEIVER"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.topActivity.PermissionsActivity"></activity>
+    </application>
+
+</manifest>
